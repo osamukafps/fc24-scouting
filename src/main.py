@@ -2,11 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Carregar dados do CSV
-current_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(current_dir, '../data/fc_24_all_players.csv')
-
-fc_24_players = pd.read_csv(file_path, low_memory=False)
-
+fc_24_players = pd.read_csv('data/fc_24_all_players.csv', low_memory=False)
 
 # Montar Atributos Agrupados
 def calcular_atributos_agrupados(dataframe):
